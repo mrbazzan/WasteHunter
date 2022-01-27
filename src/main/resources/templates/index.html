@@ -18,25 +18,22 @@
     <nav class="navbar navbar-light bg-light">
         <div class="container">
             <a class="navbar-brand h1 text-success fw-bold" href="">WasteHunter</a>
-<!--            <ul class="nav nav-pills ">-->
-<!--                {% if g.user %}-->
-<!--                <li class="nav-item ">-->
-<!--                    <a href="{{ url_for('auth.logout') }}" class="nav-link active bg-success">Logout</a>-->
-<!--                </li>-->
-<!--                <div></div>-->
-<!--                {% else %}-->
-<!--                <li class="nav-item ">-->
-<!--                    <a href="{{ url_for('auth.login') }}" class="nav-link active bg-success">Login</a>-->
-<!--                </li>-->
-<!--                {% endif %}-->
-<!--            </ul>-->
+            <ul class="nav nav-pills ">
+                <li class="nav-item ">
+                    <a th:href="@{/user}" class="nav-link active bg-success">User Login</a>
+                </li>
+                <div style="padding: 2px;"></div>
+                <li class="nav-item ">
+                    <a href="" class="nav-link active bg-success">Admin Login</a>
+                </li>
+            </ul>
         </div>
     </nav>
     <div>
         <section class="get-started mb-5 container">
             <div>
                 <h1 class="h1 mb-4 fw-bold"> There's a better way to keep our community clean</h1>
-                <a href=""><button type="button" class="btn btn-success">Get Started</button></a>
+                <a th:href="@{/signup}"><button type="button" class="btn btn-success">Get Started</button></a>
             </div>
             <img th:src="@{/images/10181.jpg}" alt="waste vector">
 
